@@ -1,61 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="no">
+
 <head>
-    <title>Accordion Dropdown Menu</title>
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ofte Stilte Spørsmål - Kompetanse.udir.no</title>
     <style>
-        /* Styling for the accordion menu */
-        .accordion {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
-            margin-bottom: 10px;
-        }
-
-        /* Styling for the active (clicked) accordion menu */
-        .active, .accordion:hover {
-            background-color: #ccc;
-        }
-
-        /* Styling for the panel (content) of the accordion menu */
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.2s ease-out;
-        }
-
-        .answer {
-            color: black;
-            font-size: 15px;
-        }
-
-        p + p {
-            margin-top: -0.8em; /* adjust the value as needed */
-        }
-
         body {
-            padding: 0;
-            margin: 0;
             font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+
+        header,
+        footer {
+            width: 100%;
+            background-color: #343a40;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
         }
 
         .container {
-            width: 100%;
-            margin: 0 auto;
+            max-width: 800px;
+            margin: 20px;
             padding: 20px;
-            background-color: #F3F3F3;
-            color: #334455;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .main-heading {
@@ -71,6 +46,42 @@
             line-height: 1.5;
         }
 
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+            margin-bottom: 10px;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .answer {
+            color: black;
+            font-size: 15px;
+        }
+
+        p + p {
+            margin-top: -0.8em;
+        }
+
         .footer {
             text-align: center;
             margin: 20px 0;
@@ -82,9 +93,12 @@
         }
     </style>
 </head>
+
 <body>
+    <header>
+        <h2>Ofte Stilte Spørsmål - Kompetanse.udir.no</h2>
+    </header>
     <div class="container">
-        <h2 class="main-heading">Ofte Stilte Spørsmål - Kompetanse.udir.no</h2>
         <div class="content">
             <h2>Kompetanse.udir.no er Utdanningsdirektoratet sin kompetansehevningsplattform.</h2>
             <p>Kompetansepakkene er laget for å jobbe med i fellesskap og for å jobbe med over tid. Kompetansepakkene har prosess- og lederstøtte, og innholdet er tenkt brukt i barnehagebasert eller skolebasert kompetanseutvikling. Innholdet bør tilpasses lokalt, det er dere som vet hvilket behov dere har for utvikling. Kompetansepakken kan brukes i hele kollegiet, men den kan også brukes av mindre grupper, for eksempel i team eller på trinn.</p>
@@ -168,4 +182,5 @@
         }
     </script>
 </body>
+
 </html>
